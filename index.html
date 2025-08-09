@@ -7,19 +7,13 @@
   <meta name="description" content="天宸輕鋼架，台南在地輕鋼架、
     天花板與隔間施工，品質保證，免費估價。" />
   <style>
-    /* 全站字體改成標楷體 */
-    body {
-      font-family: "標楷體", "DFKai-SB", "KaiTi", serif;
-    }
-
-    /* 固定圖片靠右，滑動時跟著移動 */
+    /* 移除固定定位，讓圖片正常排列 */
     #fixed-gif {
-      position: fixed;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
+      position: static;
+      display: block;
+      margin: 20px auto;
       max-width: 300px;
-      z-index: 1000;
+      z-index: auto;
     }
 
     /* header 內排版：Logo 與標題水平置中對齊 */
@@ -76,7 +70,7 @@
     </p>
   </section>
 
-  <!-- 固定靠右的動態圖片 -->
+  <!-- 改為放下面的圖片 -->
   <img id="fixed-gif" src="images_tc/tc1.gif" alt="動態圖片" />
 
   <footer>
