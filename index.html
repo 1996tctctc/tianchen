@@ -87,27 +87,77 @@
     </ul>
   </section>
 
-  <section>
-    <h2>專業背景</h2>
-    <p>師傅們有十幾年經驗，也可以協助天車操作及推高機操作，歡迎聯絡 (*≧∇≦*)</p>
-  </section>
+  <style>
+  body {
+    font-family: "標楷體", DFKai-SB, serif;
+  }
 
-  <section>
-    <h2>聯絡我們</h2>
-    <div class="contact-info">
-      <span>電話：<a href="tel:0936797580">0936797580</a></span>
-      <span>地址：
-        <a href="https://www.google.com/maps/dir/?api=1&destination=天宸輕鋼架" target="_blank" rel="noopener noreferrer">
-          天宸輕鋼架
-        </a>
-      </span>
-      <span>LINE：
-        <a href="https://line.me/ti/p/你的LINE_ID" target="_blank" rel="noopener noreferrer">
-          <img src="images_tc/tc3.png" alt="LINE" class="line-icon" />
-        </a>
-      </span>
-    </div>
-  </section>
+  #fixed-gif {
+    position: static;
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+
+  #logo {
+    max-height: 60px;
+    vertical-align: middle;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  /* 電話與地址同一行 */
+  .contact-top {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  /* LINE 圖標靠右並放大 */
+  .line-container {
+    text-align: right;
+    margin-top: 8px;
+  }
+
+  .line-icon {
+    width: 48px;
+    height: 48px;
+    vertical-align: middle;
+  }
+</style>
+
+<section>
+  <h2>聯絡我們</h2>
+  <div class="contact-top">
+    <span>電話：<a href="tel:0936797580">0936797580</a></span>
+    <span>地址：
+      <a href="https://www.google.com/maps/dir/?api=1&destination=天宸輕鋼架" target="_blank" rel="noopener noreferrer">
+        天宸輕鋼架
+      </a>
+    </span>
+  </div>
+  <div class="line-container">
+    <a href="https://line.me/ti/p/你的LINE_ID" target="_blank" rel="noopener noreferrer">
+      <img src="images_tc/tc3.png" alt="LINE" class="line-icon" />
+    </a>
+  </div>
+</section>
 
   <img id="fixed-gif" src="images_tc/tc1.gif" alt="動態圖片" />
 
@@ -116,3 +166,4 @@
   </footer>
 </body>
 </html>
+
