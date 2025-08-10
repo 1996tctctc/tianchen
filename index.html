@@ -140,17 +140,69 @@
     height: 48px;
     vertical-align: middle;
   }
+<style>
+  body {
+    font-family: "標楷體", DFKai-SB, serif;
+  }
+
+  #fixed-gif {
+    position: static;
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+
+  #logo {
+    max-height: 60px;
+    vertical-align: middle;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  /* 聯絡資訊單獨換行 */
+  .contact-item {
+    margin: 5px 0;
+  }
+
+  /* LINE 圖標放大並靠右 */
+  .line-container {
+    text-align: right;
+    margin-top: 10px;
+  }
+
+  .line-icon {
+    width: 144px;  /* 原本 48px 的 3 倍 */
+    height: 144px;
+    vertical-align: middle;
+  }
 </style>
 
 <section>
   <h2>聯絡我們</h2>
-  <div class="contact-top">
-    <span>電話：<a href="tel:0936797580">0936797580</a></span>
-    <span>地址：
-      <a href="https://www.google.com/maps/dir/?api=1&destination=天宸輕鋼架" target="_blank" rel="noopener noreferrer">
-        天宸輕鋼架
-      </a>
-    </span>
+  <div class="contact-item">
+    電話：<a href="tel:0936797580">0936797580</a>
+  </div>
+  <div class="contact-item">
+    地址：
+    <a href="https://www.google.com/maps/dir/?api=1&destination=天宸輕鋼架" target="_blank" rel="noopener noreferrer">
+      天宸輕鋼架
+    </a>
   </div>
   <div class="line-container">
     <a href="https://line.me/ti/p/你的LINE_ID" target="_blank" rel="noopener noreferrer">
@@ -159,6 +211,7 @@
   </div>
 </section>
 
+
   <img id="fixed-gif" src="images_tc/tc1.gif" alt="動態圖片" />
 
   <footer>
@@ -166,4 +219,5 @@
   </footer>
 </body>
 </html>
+
 
