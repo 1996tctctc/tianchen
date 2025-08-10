@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>台南輕鋼架專業施工 |天宸輕鋼架</title>
+  <title>台南輕鋼架專業施工 | 天宸輕鋼架</title>
   <meta name="description" content="天宸輕鋼架，台南在地輕鋼架、
     天花板與隔間施工，品質保證，免費估價。" />
   
@@ -11,7 +11,10 @@
   <link rel="icon" href="images_tc/tc2.jpg" type="image/jpeg" />
 
   <style>
-    /* 讓圖片寬度隨容器縮放，避免手機螢幕圖片過大 */
+    body {
+      font-family: "標楷體", DFKai-SB, serif;
+    }
+
     #fixed-gif {
       position: static;
       display: block;
@@ -22,7 +25,6 @@
       box-sizing: border-box;
     }
 
-    /* header 內排版：Logo 與標題水平置中對齊 */
     header {
       display: flex;
       align-items: center;
@@ -42,6 +44,20 @@
       font-size: 3em;
       text-align: center;
     }
+
+    /* 聯絡資訊一行排列（小螢幕會自動換行） */
+    .contact-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .line-icon {
+      width: 28px;
+      height: 28px;
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
@@ -53,7 +69,7 @@
 
   <section>
     <h2>關於我們</h2>
-    <p>天宸輕鋼架位於台南，我們做過學校/公司/月子中心/飯店/民宿/住宅...等可以來了解看看,免費估價。</p>
+    <p>天宸輕鋼架位於台南，我們做過學校/公司/月子中心/飯店/民宿/住宅...等可以來了解看看，免費估價。</p>
   </section>
 
   <section>
@@ -71,24 +87,28 @@
     </ul>
   </section>
 
-   <section>
+  <section>
     <h2>專業背景</h2>
-    <p>師傅們有十幾年經驗,也可以協助天車操作及推高機操作,歡迎聯絡  (*≧∇≦*)</p>
+    <p>師傅們有十幾年經驗，也可以協助天車操作及推高機操作，歡迎聯絡 (*≧∇≦*)</p>
   </section>
-
 
   <section>
     <h2>聯絡我們</h2>
-    <p>電話：<a href="tel:0936797580">0936797580</a></p>
-    <p>
-      地址：
-      <a href="https://www.google.com/maps/dir/?api=1&destination=天宸輕鋼架" target="_blank" rel="noopener noreferrer">
-        天宸輕鋼架
-      </a>
-    </p>
+    <div class="contact-info">
+      <span>電話：<a href="tel:0936797580">0936797580</a></span>
+      <span>地址：
+        <a href="https://www.google.com/maps/dir/?api=1&destination=天宸輕鋼架" target="_blank" rel="noopener noreferrer">
+          天宸輕鋼架
+        </a>
+      </span>
+      <span>LINE：
+        <a href="https://line.me/ti/p/你的LINE_ID" target="_blank" rel="noopener noreferrer">
+          <img src="images_tc/tc3.png" alt="LINE" class="line-icon" />
+        </a>
+      </span>
+    </div>
   </section>
 
-  <!-- 改為放下面的圖片 -->
   <img id="fixed-gif" src="images_tc/tc1.gif" alt="動態圖片" />
 
   <footer>
@@ -96,4 +116,3 @@
   </footer>
 </body>
 </html>
-
