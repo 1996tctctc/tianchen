@@ -168,19 +168,40 @@
 
     /* 手機版調整 */
     @media screen and (max-width: 768px) {
+      /* header 改成上下排列，logo與天宸輕鋼架同一行 */
       .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
         max-width: 100%;
         padding: 0 10px;
+        gap: 8px;
+      }
+      .header-top {
+        display: flex;
+        align-items: center;
         gap: 12px;
+        width: 100%;
       }
       #logo {
         max-height: 70px;
+        flex-shrink: 0;
+      }
+      .header-text {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        text-align: left;
       }
       .header-text h1 {
         font-size: 2.1em;
+        margin: 0;
       }
-      .subtitle {
+      .header-subtitle {
         font-size: 1em;
+        color: #666;
+        margin: 0;
+        padding-left: 82px; /* 與 logo 對齊 */
+        width: 100%;
       }
 
       .about-text-single-line {
@@ -231,14 +252,7 @@
         max-height: 70px;
       }
       .header-text {
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-        text-align: left;
-      }
-      .header-text h1 {
-        font-size: 2.1em;
-        margin: 0;
+        /* 已在 .header-top 裡面定義 */
       }
       .subtitle {
         font-size: 1em;
@@ -265,11 +279,13 @@
 <body>
   <header>
     <div class="header-inner">
-      <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
-      <div class="header-text">
-        <h1>天宸輕鋼架</h1>
-        <div class="subtitle">台南輕鋼架施工專業團隊</div>
+      <div class="header-top">
+        <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
+        <div class="header-text">
+          <h1>天宸輕鋼架</h1>
+        </div>
       </div>
+      <div class="header-subtitle">台南輕鋼架施工團隊</div>
     </div>
   </header>
 
