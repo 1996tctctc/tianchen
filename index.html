@@ -31,12 +31,14 @@
       max-width: 600px;
       width: 100%;
       justify-content: center;
+      flex-wrap: nowrap;  /* 不換行 */
     }
 
     #logo {
       max-height: 90px;
       width: auto;
       vertical-align: middle;
+      flex-shrink: 0;
     }
 
     .header-text {
@@ -138,6 +140,7 @@
     @media screen and (max-width: 768px) {
       .header-inner {
         gap: 20px;
+        flex-wrap: nowrap;
       }
       #logo {
         max-height: 120px;
