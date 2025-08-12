@@ -86,15 +86,15 @@
       box-shadow: none;
     }
 
-    /* 聯絡我們區 */
+    /* 聯絡我們區 - 全尺寸置中 */
     .contact-section {
       font-size: 18px;
       max-width: 720px;
       margin: 0 auto;
-      text-align: left;
+      text-align: center; /* 置中 */
     }
     .contact-section .contact-item {
-      text-align: left;
+      text-align: center; /* 置中 */
     }
 
     /* 手機版專用 Line ID 顯示 */
@@ -191,19 +191,6 @@
       }
     }
 
-    /* footer 圖片 */
-    .footer-images {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      margin: 24px 0;
-    }
-    .footer-images img {
-      max-width: 100%;
-      height: auto;
-    }
-
     @media screen and (min-width: 1024px) {
       html {
         zoom: 1.5;
@@ -214,18 +201,17 @@
           -moz-transform-origin: 0 0;
         }
       }
+      section {
+        max-width: 720px;
+        margin: 0 auto;
+        text-align: center;
+      }
       section:not(.contact-section) {
         text-align: center;
       }
       section ul {
         display: inline-block;
         text-align: left;
-      }
-      .contact-section {
-        text-align: center;
-      }
-      .contact-section .contact-item {
-        text-align: center;
       }
       .footer-images {
         flex-direction: row;
