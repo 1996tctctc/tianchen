@@ -17,44 +17,33 @@
       line-height: 1.6;
     }
 
-    /* header */
+    /* header logo區置中，上下排列 */
     header {
       display: flex;
       justify-content: center;
+      align-items: center;
       padding: 12px 0;
-      max-width: 720px;
-      margin: 0 auto;
+      text-align: center;
     }
-
     .header-inner {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 8px;
-      width: 100%;
+      gap: 6px;
       max-width: 480px;
-      flex-wrap: nowrap;
+      width: 100%;
     }
-
     #logo {
       max-height: 70px;
       width: auto;
     }
-
-    .header-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    header h1 {
+    .header-text h1 {
       margin: 0;
-      font-size: 2em;
-      white-space: nowrap;
+      font-size: 1.8em;
     }
-
     .subtitle {
       font-size: 1em;
-      color: #555;
+      color: #666;
       margin: 0;
     }
 
@@ -96,6 +85,14 @@
       text-align: left;
     }
 
+    /* 手機版專用 Line ID 顯示 */
+    .line-id-mobile {
+      display: none;
+      margin-top: 4px;
+      font-weight: 600;
+      color: #000;
+    }
+
     /* LINE 區塊 150x150 */
     .line-container {
       position: fixed;
@@ -131,6 +128,7 @@
     }
 
     @media screen and (max-width: 768px) {
+      /* header內寬滿版 */
       .header-inner {
         max-width: 100%;
         padding: 0 10px;
@@ -138,12 +136,14 @@
       #logo {
         max-height: 50px;
       }
-      header h1 {
+      .header-text h1 {
         font-size: 1.4em;
       }
       .subtitle {
         font-size: 0.9em;
       }
+
+      /* 關於我們手機版優化 */
       .about-text-single-line {
         font-size: 1em;
         padding: 12px;
@@ -151,6 +151,8 @@
         line-height: 1.7;
         text-align: left;
       }
+
+      /* LINE 區塊手機版改位置並縮小 */
       .line-container {
         bottom: 10px;
         top: auto;
@@ -164,8 +166,13 @@
         width: 60px;
         height: 60px;
       }
-      .line-id-text {
-        font-size: 0.75em;
+      /* 手機版隱藏 line-container 的文字 */
+      .line-container .line-id-text {
+        display: none;
+      }
+      /* 手機版聯絡我們新增 Line ID */
+      .line-id-mobile {
+        display: block;
       }
     }
 
@@ -249,6 +256,7 @@
       <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer" style="color: #000; text-decoration: underline; font-weight: 600;">
         （如電話繁忙請使用LINE留言）
       </a>
+      <div class="line-id-mobile">Line ID: 155aarli</div>
     </div>
     <div class="contact-item">
       地址：
