@@ -6,8 +6,6 @@
   <title>台南輕鋼架專業施工 | 天宸輕鋼架</title>
   <meta name="description" content="天宸輕鋼架，台南在地輕鋼架、天花板與隔間施工，品質保證，免費估價。" />
   <link rel="icon" href="images_tc/tc2.jpg" type="image/jpeg" />
-
-  <!-- 引入 Google Fonts Noto Sans TC -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
 
   <style>
@@ -15,24 +13,28 @@
       font-family: "標楷體", "DFKai-SB", "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "PingFang TC", serif;
       margin: 0;
       padding: 0;
-      font-size: 18px;
+      font-size: 18px; /* 全站預設字體18px */
       line-height: 1.6;
     }
 
+    /* 整體header容器縮小一點 */
     header {
       display: flex;
       justify-content: center;
       padding: 12px 0;
+      max-width: 720px;
+      margin: 0 auto;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
-      gap: 16px;
-      max-width: 720px;
+      gap: 12px; /* 間距縮小 */
       width: 100%;
+      max-width: 480px; /* 縮小整個區域 */
     }
 
+    /* logo 放大到90px */
     #logo {
       max-height: 90px;
       vertical-align: middle;
@@ -47,7 +49,7 @@
     .header-title, .header-subtitle {
       display: flex;
       align-items: center;
-      white-space: nowrap; /* 讓文字不要換行 */
+      white-space: nowrap;
     }
 
     header h1 {
@@ -72,14 +74,28 @@
       margin: 6px 0;
     }
 
+    /* 聯絡我們區 */
     .contact-section {
-      text-align: left;
-      font-size: 18px;
+      font-size: 18px; /* 預設18px */
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: left; /* 預設靠左 */
     }
     .contact-section .contact-item {
       text-align: left;
     }
 
+    /* 手機版聯絡我們區字體維持16px且靠左 */
+    @media screen and (max-width: 768px) {
+      .contact-section {
+        font-size: 16px !important;
+        text-align: left !important;
+        max-width: 100%;
+        padding: 0 12px;
+      }
+    }
+
+    /* LINE 區塊 電腦版固定右側，整體尺寸小一點 */
     .line-container {
       position: fixed;
       top: 50%;
@@ -89,28 +105,52 @@
       flex-direction: column;
       align-items: flex-end;
       background: rgba(255, 255, 255, 0.9);
-      padding: 10px 14px;
+      padding: 8px 10px;
       border-radius: 8px 0 0 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       z-index: 9999;
-      text-align: center;
-      min-width: 180px;
-      font-size: 18px;
+      min-width: 150px;
+      font-size: 16px;
     }
 
     .line-icon {
-      width: 150px;
-      height: 150px;
+      width: 90px;
+      height: 90px;
       cursor: pointer;
     }
 
     .line-id-text {
-      margin-top: 8px;
+      margin-top: 6px;
       font-weight: 600;
       color: #000;
-      font-size: 1.1em;
+      font-size: 1em;
       user-select: none;
       text-align: center;
+    }
+
+    /* 手機版LINE區塊只顯示圖示，文字隱藏 */
+    @media screen and (max-width: 768px) {
+      .line-container {
+        position: fixed;
+        top: auto;
+        bottom: 10px;
+        right: 10px;
+        flex-direction: row;
+        align-items: center;
+        padding: 6px;
+        border-radius: 8px;
+        min-width: auto;
+        width: auto;
+        background: rgba(255,255,255,0.9);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      }
+      .line-icon {
+        width: 80px;
+        height: 80px;
+      }
+      .line-id-text {
+        display: none; /* 文字隱藏 */
+      }
     }
 
     .footer-images {
@@ -187,13 +227,6 @@
         flex-grow: 1;
       }
     }
-
-    @media screen and (max-width: 768px) {
-      .line-icon {
-        width: 80px;
-        height: 80px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -225,31 +258,16 @@
     </p>
   </section>
 
-  <section>
-    <h2>服務項目</h2>
-    <ul>
-      <li>輕鋼架天花板</li>
-      <li>輕鋼架隔間</li>
-      <li>石膏板</li>
-      <li>礦纖板</li>
-      <li>矽酸鈣板</li>
-      <li>水泥纖維板</li>
-      <li>塑鋼版</li>
-      <li>金屬條狀天花板</li>
-      <li>隔間設計與施工專服務</li>
-    </ul>
-  </section>
-
   <section class="contact-section">
     <h2>聯絡我們</h2>
-    <div class="contact-item" style="text-align:center;">
+    <div class="contact-item">
       電話：<a href="tel:0936797580">0936797580</a><br />
       <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer" 
          style="color: #000000; text-decoration: underline; font-weight: 600;">
         （如電話繁忙請使用LINE留言）
       </a>
     </div>
-    <div class="contact-item" style="text-align:center;">
+    <div class="contact-item">
       地址：
       <a href="https://www.google.com/maps/dir/?api=1&destination=台南市南區明興路" target="_blank" rel="noopener noreferrer">
         台南市南區明興路
