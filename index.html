@@ -322,19 +322,62 @@
   </section>
   
   <section>
-    <h2>服務項目</h2>
-    <ul>
-      <li>輕鋼架天花板</li>
-      <li>輕鋼架隔間</li>
-      <li>石膏板</li>
-      <li>礦纖板</li>
-      <li>矽酸鈣板</li>
-      <li>水泥纖維板</li>
-      <li>塑鋼版</li>
-      <li>金屬條狀天花板</li>
-      <li>隔間設計與施工服務</li>
-    </ul>
-  </section>
+  <h2>服務項目</h2>
+  <ul class="service-list">
+    <li>輕鋼架天花板</li>
+    <li>輕鋼架隔間</li>
+    <li>石膏板</li>
+    <li>礦纖板</li>
+    <li>矽酸鈣板</li>
+    <li>水泥纖維板</li>
+    <li>塑鋼版</li>
+    <li>金屬條狀天花板</li>
+    <li>隔間設計與施工服務</li>
+  </ul>
+</section>
+
+<style>
+  section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+    font-family: "Microsoft JhengHei", sans-serif;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    justify-content: center;
+  }
+
+  .service-list li {
+    background-color: #f2f2f2;
+    padding: 10px 16px;
+    border-radius: 6px;
+    flex: 1 1 calc(45% - 20px); /* 兩欄排版 */
+    max-width: calc(45% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .service-list li {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+</style>
+
   
   <section class="contact-section">
     <h2>🔨聯絡我們</h2>
