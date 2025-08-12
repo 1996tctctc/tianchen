@@ -17,30 +17,42 @@
       line-height: 1.6;
     }
 
-    /* header logo區置中，上下排列 */
+    /* header 區塊 */
     header {
       display: flex;
       justify-content: center;
-      align-items: center;
       padding: 12px 0;
       text-align: center;
     }
+
     .header-inner {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 12px;
       max-width: 480px;
       width: 100%;
+      justify-content: center; /* 整體置中 */
     }
+
     #logo {
       max-height: 70px;
       width: auto;
+      vertical-align: middle;
     }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left; /* 文字靠左，讓它和logo排一行 */
+    }
+
     .header-text h1 {
       margin: 0;
       font-size: 1.8em;
+      line-height: 1.1;
     }
+
     .subtitle {
       font-size: 1em;
       color: #666;
@@ -102,20 +114,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 6px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      background: none; /* 背景透明 */
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
       z-index: 9999;
       width: 150px;
       height: 150px;
       box-sizing: border-box;
+      justify-content: center;
     }
 
     .line-icon {
-      width: 80px;
-      height: 80px;
+      width: 150px;
+      height: 150px;
       cursor: pointer;
+      display: block;
     }
 
     .line-id-text {
@@ -128,10 +142,11 @@
     }
 
     @media screen and (max-width: 768px) {
-      /* header內寬滿版 */
+      /* header 內容維持一行置中 */
       .header-inner {
         max-width: 100%;
         padding: 0 10px;
+        justify-content: center;
       }
       #logo {
         max-height: 50px;
@@ -158,9 +173,9 @@
         top: auto;
         right: 10px;
         transform: none;
-        flex-direction: column;
-        width: 120px;
-        height: 120px;
+        width: 60px;
+        height: 60px;
+        padding: 0;
       }
       .line-icon {
         width: 60px;
