@@ -15,13 +15,13 @@
       font-family: "標楷體", "DFKai-SB", "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "PingFang TC", serif;
       margin: 0;
       padding: 0;
-      font-size: 18px; /* 放大2px，預設16px升到18px */
+      font-size: 18px;
       line-height: 1.6;
     }
 
     header {
       display: flex;
-      justify-content: center; /* header 整體置中 */
+      justify-content: center;
       padding: 12px 0;
     }
 
@@ -34,7 +34,7 @@
     }
 
     #logo {
-      max-height: 90px; /* 比之前稍微大 */
+      max-height: 90px;
       vertical-align: middle;
     }
 
@@ -42,7 +42,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      text-align: left;
+    }
+
+    .header-title, .header-subtitle {
+      display: flex;
+      align-items: center;
+      white-space: nowrap; /* 讓文字不要換行 */
     }
 
     header h1 {
@@ -53,12 +58,13 @@
     .subtitle {
       font-size: 1.7em;
       color: #555;
+      margin: 0;
     }
 
     .marquee {
       background-color: yellow;
       color: red;
-      font-size: 1.3em; /* 放大 */
+      font-size: 1.3em;
       padding: 6px 0;
     }
 
@@ -66,16 +72,14 @@
       margin: 6px 0;
     }
 
-    /* 手機版聯絡我們左對齊 */
     .contact-section {
       text-align: left;
-      font-size: 18px; /* 放大 */
+      font-size: 18px;
     }
     .contact-section .contact-item {
       text-align: left;
     }
 
-    /* 固定右側LINE區塊 */
     .line-container {
       position: fixed;
       top: 50%;
@@ -109,7 +113,6 @@
       text-align: center;
     }
 
-    /* 版權前圖片區塊，手機預設直排 */
     .footer-images {
       display: flex;
       flex-direction: column;
@@ -123,9 +126,8 @@
       height: auto;
     }
 
-    /* 關於我們美化區塊 */
     .about-text {
-      background-color: #f9f9f9; /* 淺灰底 */
+      background-color: #f9f9f9;
       border-radius: 8px;
       padding: 24px 30px;
       max-width: 720px;
@@ -147,19 +149,17 @@
       font-weight: 700;
     }
 
-    /* 電腦版樣式 */
     @media screen and (min-width: 1024px) {
       html {
-        zoom: 1.5; /* Chrome/Edge/Safari */
+        zoom: 1.5;
       }
       @-moz-document url-prefix() {
         html {
-          -moz-transform: scale(1.5); /* Firefox */
+          -moz-transform: scale(1.5);
           -moz-transform-origin: 0 0;
         }
       }
 
-      /* 電腦版關於我們到地址置中 */
       section:not(.contact-section) {
         text-align: center;
       }
@@ -168,7 +168,6 @@
         text-align: left;
       }
 
-      /* 電腦版聯絡我們置中 */
       .contact-section {
         text-align: center;
       }
@@ -176,7 +175,6 @@
         text-align: center;
       }
 
-      /* 電腦版圖片橫排並等高 */
       .footer-images {
         flex-direction: row;
         justify-content: center;
@@ -190,7 +188,6 @@
       }
     }
 
-    /* 手機版縮小LINE圖示 */
     @media screen and (max-width: 768px) {
       .line-icon {
         width: 80px;
@@ -204,8 +201,12 @@
     <div class="header-inner">
       <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
       <div class="header-text">
-        <h1>天宸輕鋼架</h1>
-        <div class="subtitle">台南輕鋼架施工專業團隊</div>
+        <div class="header-title">
+          <h1>天宸輕鋼架</h1>
+        </div>
+        <div class="header-subtitle">
+          <div class="subtitle">台南輕鋼架施工專業團隊</div>
+        </div>
       </div>
     </div>
   </header>
@@ -264,7 +265,6 @@
     <div class="line-id-text">Line ID: @155aarli</div>
   </div>
 
-  <!-- 版權前的三張圖片 -->
   <div class="footer-images">
     <img src="images_tc/tc1.gif" alt="動態圖片 tc1" />
     <img src="images_tc/tc4.gif" alt="動態圖片 tc4" />
