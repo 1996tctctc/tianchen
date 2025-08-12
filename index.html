@@ -68,6 +68,8 @@
       color: red;
       font-size: 1.3em;
       padding: 6px 0;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .contact-item {
@@ -166,30 +168,6 @@
       height: auto;
     }
 
-    .about-text {
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      padding: 24px 30px;
-      max-width: 720px;
-      margin: 24px auto;
-      color: #444;
-      font-size: 1.3em;
-      line-height: 1.8;
-      letter-spacing: 0.04em;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .about-text p {
-      margin: 14px 0;
-    }
-
-    .about-text strong {
-      color: #222;
-      font-weight: 700;
-    }
-
-    /* 新增這段讓關於我們第一段在電腦版整行不換行 */
     .about-text-single-line {
       max-width: 720px;
       margin: 24px auto;
@@ -199,8 +177,8 @@
       letter-spacing: 0.04em;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
-      white-space: nowrap;  /* 不換行 */
-      overflow-x: auto;    /* 超出可左右滑動 */
+      white-space: nowrap;
+      overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       padding: 24px 30px;
       border-radius: 8px;
@@ -208,8 +186,8 @@
 
     @media screen and (max-width: 768px) {
       .about-text-single-line {
-        white-space: normal; /* 手機可換行 */
-        font-size: 1em;       /* 手機字體正常大小 */
+        white-space: normal;
+        font-size: 1em;
         padding: 16px 12px;
         box-shadow: none;
         max-width: 100%;
@@ -280,7 +258,8 @@
   <section>
     <h2>關於我們</h2>
     <p class="about-text-single-line">
-      天宸輕鋼架位於台南，擁有豐富經驗，服務學校、企業、月子中心、飯店、民宿與住宅等多元場域。
+      天宸輕鋼架位於台南，擁有豐富經驗，服務學校、企業、月子中心<br />
+      飯店、民宿與住宅等多元場域。
     </p>
     <p style="max-width:720px; margin-left:auto; margin-right:auto; text-align:center; font-size: 1.3em; line-height:1.8; color:#444;">
       我們提供專業施工與免費估價，歡迎隨時洽詢了解！
