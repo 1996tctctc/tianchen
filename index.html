@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>台南輕鋼架施工 | 天宸輕鋼架</title>
   <meta name="description" content="天宸輕鋼架，台南在地輕鋼架、天花板與隔間施工，免費估價。" />
-  <link rel="icon" href="images_tc/tc2.jpg" type="image/jpeg" />
   <style>
     body {
       display: flex;
@@ -41,12 +40,16 @@
       text-align: center;
       max-width: 600px;
       width: 100%;
-      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    .logo-link {
+      display: inline-block;
+      flex-shrink: 0;
     }
     #logo {
       max-height: 120px;
       width: auto;
-      flex-shrink: 0;
+      display: block;
     }
     .header-text-group {
       display: flex;
@@ -166,18 +169,22 @@
       display: block;
     }
     footer p {
-  text-align: left; /* 靠左 */
-  font-size: 12px;
-  margin: 12px 0 24px 0;
-  max-width: 720px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 10px;
-}
-
+      text-align: right;
+      font-size: 12px;
+      margin: 12px 0 24px 0;
+      max-width: 720px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
     @media screen and (max-width: 768px) {
       #logo {
         max-height: 70px;
+      }
+      .header-content {
+        flex-direction: column;
+        gap: 6px; /* 手機版上下間距較小 */
+        align-items: center;
       }
       .header-text-group h1 {
         font-size: 2.1em;
@@ -186,8 +193,7 @@
         font-size: 1em;
       }
       .header-inner {
-        gap: 12px;
-        padding: 0 10px;
+        padding: 10px 10px;
       }
       .about-text-single-line {
         font-size: 1em;
@@ -257,24 +263,18 @@
 </head>
 <body>
   <header>
-  <div class="header-inner">
-    <div class="header-content">
-      <!-- 電腦版 logo 變成連結 -->
-      <a href="https://tianchen-lk.github.io/tianchen/" aria-label="天宸輕鋼架">
-        <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
-      </a>
-      <!-- 手機版可點擊 logo -->
-      <a href="https://tianchen-lk.github.io/tianchen/" class="mobile-logo-link" aria-label="天宸輕鋼架">
-        <img src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
-      </a>
-      <div class="header-text-group">
-        <h1>天宸輕鋼架</h1>
-        <div class="header-subtitle">台南輕鋼架施工團隊</div>
+    <div class="header-inner">
+      <div class="header-content">
+        <a href="https://tianchen-lk.github.io/tianchen/" aria-label="天宸輕鋼架" class="logo-link">
+          <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
+        </a>
+        <div class="header-text-group">
+          <h1>天宸輕鋼架</h1>
+          <div class="header-subtitle">台南輕鋼架施工團隊</div>
+        </div>
       </div>
     </div>
-  </div>
-</header>
-
+  </header>
 
   <marquee class="marquee" scrollamount="8">
     免費估價 歡迎來電0936797580 免費估價 歡迎來電0936797580 免費估價 歡迎來電0936797580
@@ -295,7 +295,7 @@
       <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer" style="color: #000; text-decoration: underline; font-weight: 600;">
         （如電話繁忙請使用LINE留言）
       </a>
-      <div class="line-id-mobile">Line ID: @155aarli</div>
+      <div class="line-id-mobile">Line ID: 155aarli</div>
     </div>
     <div class="contact-item">
       地址：
@@ -324,6 +324,3 @@
   </footer>
 </body>
 </html>
-
-
-
