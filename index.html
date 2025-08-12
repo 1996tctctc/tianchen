@@ -15,7 +15,7 @@
       font-family: "標楷體", "DFKai-SB", "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "PingFang TC", serif;
       margin: 0;
       padding: 0;
-      font-size: 18px; /* 放大2px，預設16px升到18px */
+      font-size: 18px; /* 整體字體放大 */
       line-height: 1.6;
     }
 
@@ -25,28 +25,28 @@
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      padding: 12px 0; /* 增加一點上下內距 */
+      padding: 12px 0;
     }
 
     #logo {
-      max-height: 65px; /* 比之前稍微大一點 */
+      max-height: 65px;
       vertical-align: middle;
     }
 
     header h1 {
       margin: 0;
-      font-size: 3.4em; /* 原3em放大約2px */
+      font-size: 3.4em;
     }
 
     .subtitle {
-      font-size: 1.7em; /* 從1.5em放大 */
+      font-size: 1.7em;
       color: #555;
     }
 
     .marquee {
       background-color: yellow;
       color: red;
-      font-size: 1.3em; /* 放大 */
+      font-size: 1.3em;
       padding: 6px 0;
     }
 
@@ -57,7 +57,7 @@
     /* 手機版聯絡我們左對齊 */
     .contact-section {
       text-align: left;
-      font-size: 18px; /* 放大 */
+      font-size: 18px;
     }
     .contact-section .contact-item {
       text-align: left;
@@ -71,15 +71,15 @@
       transform: translateY(-50%);
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
+      align-items: center;
       background: rgba(255, 255, 255, 0.9);
       padding: 10px 14px;
       border-radius: 8px 0 0 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       z-index: 9999;
-      text-align: center;
       min-width: 180px;
       font-size: 18px;
+      text-align: center;
     }
 
     .line-icon {
@@ -113,17 +113,13 @@
 
     /* 關於我們美化區塊 */
     .about-text {
-      background-color: #f9f9f9; /* 淺灰底 */
-      border-radius: 8px;
-      padding: 24px 30px;
       max-width: 720px;
-      margin: 24px auto;
-      color: #444;
+      margin: 20px auto 30px auto;
+      text-align: center;
       font-size: 1.3em;
       line-height: 1.8;
       letter-spacing: 0.04em;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
+      color: #444;
     }
 
     .about-text p {
@@ -138,16 +134,15 @@
     /* 電腦版樣式 */
     @media screen and (min-width: 1024px) {
       html {
-        zoom: 1.5; /* Chrome/Edge/Safari */
+        zoom: 1.5;
       }
       @-moz-document url-prefix() {
         html {
-          -moz-transform: scale(1.5); /* Firefox */
+          -moz-transform: scale(1.5);
           -moz-transform-origin: 0 0;
         }
       }
 
-      /* 電腦版關於我們到地址置中 */
       section:not(.contact-section) {
         text-align: center;
       }
@@ -156,7 +151,6 @@
         text-align: left;
       }
 
-      /* 電腦版聯絡我們置中 */
       .contact-section {
         text-align: center;
       }
@@ -164,7 +158,6 @@
         text-align: center;
       }
 
-      /* 電腦版圖片橫排並等高 */
       .footer-images {
         flex-direction: row;
         justify-content: center;
@@ -202,12 +195,10 @@
 
   <section>
     <h2>關於我們</h2>
-    <p style="margin-bottom:1em; max-width:720px; margin-left:auto; margin-right:auto; text-align:center;">
-      天宸輕鋼架位於台南，擁有豐富經驗，服務學校、企業、月子中心、飯店、民宿與住宅等多元場域。
-    </p>
-    <p style="max-width:720px; margin-left:auto; margin-right:auto; text-align:center;">
-      我們提供專業施工與免費估價，歡迎隨時洽詢了解！
-    </p>
+    <div class="about-text">
+      <p>天宸輕鋼架位於台南，擁有豐富經驗，服務學校、企業、月子中心、飯店、民宿與住宅等多元場域。</p>
+      <p>我們提供專業施工與免費估價，歡迎隨時洽詢了解！</p>
+    </div>
   </section>
 
   <section>
@@ -242,7 +233,7 @@
     </div>
   </section>
 
-  <div class="line-container" >
+  <div class="line-container">
     <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer">
       <img src="images_tc/tc3.png" alt="LINE" class="line-icon" />
     </a>
