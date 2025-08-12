@@ -15,23 +15,34 @@
       font-family: "標楷體", "DFKai-SB", "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "PingFang TC", serif;
       margin: 0;
       padding: 0;
-      font-size: 18px;
+      font-size: 18px; /* 放大2px，預設16px升到18px */
       line-height: 1.6;
     }
 
     header {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      justify-content: center; /* header 整體置中 */
       padding: 12px 0;
     }
 
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 720px;
+      width: 100%;
+    }
+
     #logo {
-      max-height: 90px; /* 電腦 & 手機都放大 */
+      max-height: 90px; /* 比之前稍微大 */
       vertical-align: middle;
-      transition: max-height 0.3s ease;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
     }
 
     header h1 {
@@ -47,7 +58,7 @@
     .marquee {
       background-color: yellow;
       color: red;
-      font-size: 1.3em;
+      font-size: 1.3em; /* 放大 */
       padding: 6px 0;
     }
 
@@ -55,16 +66,16 @@
       margin: 6px 0;
     }
 
-    /* 手機版聯絡我們靠左，字體維持16px */
+    /* 手機版聯絡我們左對齊 */
     .contact-section {
       text-align: left;
-      font-size: 18px;
+      font-size: 18px; /* 放大 */
     }
     .contact-section .contact-item {
       text-align: left;
     }
 
-    /* 固定右側LINE區塊 電腦版 */
+    /* 固定右側LINE區塊 */
     .line-container {
       position: fixed;
       top: 50%;
@@ -114,7 +125,7 @@
 
     /* 關於我們美化區塊 */
     .about-text {
-      background-color: #f9f9f9;
+      background-color: #f9f9f9; /* 淺灰底 */
       border-radius: 8px;
       padding: 24px 30px;
       max-width: 720px;
@@ -139,15 +150,16 @@
     /* 電腦版樣式 */
     @media screen and (min-width: 1024px) {
       html {
-        zoom: 1.5;
+        zoom: 1.5; /* Chrome/Edge/Safari */
       }
       @-moz-document url-prefix() {
         html {
-          -moz-transform: scale(1.5);
+          -moz-transform: scale(1.5); /* Firefox */
           -moz-transform-origin: 0 0;
         }
       }
 
+      /* 電腦版關於我們到地址置中 */
       section:not(.contact-section) {
         text-align: center;
       }
@@ -156,6 +168,7 @@
         text-align: left;
       }
 
+      /* 電腦版聯絡我們置中 */
       .contact-section {
         text-align: center;
       }
@@ -163,6 +176,7 @@
         text-align: center;
       }
 
+      /* 電腦版圖片橫排並等高 */
       .footer-images {
         flex-direction: row;
         justify-content: center;
@@ -176,27 +190,8 @@
       }
     }
 
-    /* 手機版調整 */
+    /* 手機版縮小LINE圖示 */
     @media screen and (max-width: 768px) {
-      .contact-section {
-        text-align: left !important;
-        font-size: 16px !important;
-      }
-      .contact-section .contact-item {
-        text-align: left !important;
-      }
-      #logo {
-        max-height: 90px !important;
-      }
-      .line-container {
-        min-width: auto;
-        padding: 6px 8px;
-        background: transparent;
-        box-shadow: none;
-      }
-      .line-container .line-id-text {
-        display: none;
-      }
       .line-icon {
         width: 80px;
         height: 80px;
@@ -206,10 +201,12 @@
 </head>
 <body>
   <header>
-    <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
-    <div>
-      <h1>天宸輕鋼架</h1>
-      <div class="subtitle">台南輕鋼架施工專業團隊</div>
+    <div class="header-inner">
+      <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
+      <div class="header-text">
+        <h1>天宸輕鋼架</h1>
+        <div class="subtitle">台南輕鋼架施工專業團隊</div>
+      </div>
     </div>
   </header>
 
@@ -246,7 +243,7 @@
     <h2>聯絡我們</h2>
     <div class="contact-item" style="text-align:center;">
       電話：<a href="tel:0936797580">0936797580</a><br />
-      <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer"
+      <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer" 
          style="color: #000000; text-decoration: underline; font-weight: 600;">
         （如電話繁忙請使用LINE留言）
       </a>
@@ -259,7 +256,7 @@
     </div>
   </section>
 
-  <div class="line-container">
+  <div class="line-container" >
     <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer">
       <img src="images_tc/tc3.png" alt="LINE" class="line-icon" />
     </a>
