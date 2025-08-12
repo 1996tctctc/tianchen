@@ -28,11 +28,20 @@
     }
     .header-inner {
       display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 20px 0;
+      box-sizing: border-box;
+    }
+    .header-content {
+      display: flex;
       align-items: center;
       gap: 20px;
+      justify-content: center;  /* 水平置中 */
+      text-align: center;
       max-width: 600px;
-      margin: 0 auto;
       width: 100%;
+      margin: 0 auto;
     }
     #logo {
       max-height: 120px;
@@ -43,19 +52,18 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;  /* 文字置中 */
     }
     .header-text-group h1 {
       margin: 0;
       font-size: 2.8em;
       line-height: 1.1;
       white-space: nowrap;
-      text-align: center;
     }
     .header-subtitle {
       font-size: 1.4em;
       color: #666;
       margin-top: 4px;
-      text-align: center;
     }
     .marquee {
       display: block;
@@ -149,6 +157,15 @@
       height: auto;
       display: block;
     }
+    footer p {
+      text-align: right;
+      font-size: 12px;
+      margin: 12px 0 24px 0;
+      max-width: 720px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
     @media screen and (max-width: 768px) {
       #logo {
         max-height: 70px;
@@ -199,6 +216,11 @@
         width: 80%;
         height: auto;
       }
+      footer p {
+        font-size: 10px;
+        padding: 0 10px;
+        margin: 8px 0 16px 0;
+      }
     }
     @media screen and (min-width: 1024px) {
       html {
@@ -220,10 +242,12 @@
 <body>
   <header>
     <div class="header-inner">
-      <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
-      <div class="header-text-group">
-        <h1>天宸輕鋼架</h1>
-        <div class="header-subtitle">台南輕鋼架施工團隊</div>
+      <div class="header-content">
+        <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
+        <div class="header-text-group">
+          <h1>天宸輕鋼架</h1>
+          <div class="header-subtitle">台南輕鋼架施工團隊</div>
+        </div>
       </div>
     </div>
   </header>
