@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>台南輕鋼架施工 | 天宸輕鋼架</title>
+  <title>台南輕鋼架專業施工 | 天宸輕鋼架</title>
   <meta name="description" content="天宸輕鋼架，台南在地輕鋼架、天花板與隔間施工，品質保證，免費估價。" />
   <link rel="icon" href="images_tc/tc2.jpg" type="image/jpeg" />
 
@@ -20,60 +20,46 @@
       display: flex;
       justify-content: center;
       padding: 20px 0;
+      width: 100%;
       text-align: center;
     }
 
     .header-inner {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      max-width: 600px;
-      width: 100%;
-    }
-
-    /* 上排：logo + 天宸輕鋼架 */
-    .header-top {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       gap: 20px;
+      max-width: 600px;
       width: 100%;
     }
 
     #logo {
       max-height: 120px;
       width: auto;
-      vertical-align: middle;
       flex-shrink: 0;
     }
 
-    .header-top h1 {
+    .header-text-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header-text-group h1 {
       margin: 0;
       font-size: 2.8em;
       line-height: 1.1;
       white-space: nowrap;
+      text-align: center;
     }
 
-    /* 下排：「台南輕鋼架施工團隊」 */
-   .header-subtitle {
-  font-size: 1.4em;
-  color: #666;
-  margin-top: 8px;
-  margin-left: 60px; /* 原本是 calc(120px + 20px)，改成60px */
-  width: fit-content;
-  text-align: left;
-}
+    .header-subtitle {
+      font-size: 1.4em;
+      color: #666;
+      margin-top: 4px;
+      text-align: center;
+    }
 
-/* 手機版 */
-@media screen and (max-width: 768px) {
-  .header-subtitle {
-    font-size: 1em;
-    margin-left: 35px; /* 原本 calc(70px + 12px)，改成35px */
-  }
-}
-
-
-    /* 跑馬燈滿版 */
+    /* 跑馬燈 */
     .marquee {
       display: block;
       width: 100%;
@@ -110,7 +96,7 @@
       box-shadow: none;
     }
 
-    /* 聯絡我們區 - 全尺寸置中 */
+    /* 聯絡我們區 */
     .contact-section {
       font-size: 18px;
       max-width: 720px;
@@ -121,7 +107,7 @@
       text-align: center;
     }
 
-    /* 手機版專用 Line ID 顯示 */
+    /* 手機版 Line ID */
     .line-id-mobile {
       display: none;
       margin-top: 4px;
@@ -186,16 +172,16 @@
       #logo {
         max-height: 70px;
       }
-
-      .header-top h1 {
+      .header-text-group h1 {
         font-size: 2.1em;
       }
-
       .header-subtitle {
         font-size: 1em;
-        margin-left: calc(70px + 12px);
       }
-
+      .header-inner {
+        gap: 12px;
+        padding: 0 10px;
+      }
       .about-text-single-line {
         font-size: 1em;
         padding: 12px;
@@ -203,7 +189,6 @@
         line-height: 1.7;
         text-align: left;
       }
-
       .line-container {
         bottom: 10px;
         top: auto;
@@ -223,7 +208,6 @@
       .line-id-mobile {
         display: block;
       }
-
       .footer-images {
         flex-direction: column;
         gap: 12px;
@@ -256,11 +240,11 @@
 <body>
   <header>
     <div class="header-inner">
-      <div class="header-top">
-        <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
+      <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
+      <div class="header-text-group">
         <h1>天宸輕鋼架</h1>
+        <div class="header-subtitle">台南輕鋼架施工團隊</div>
       </div>
-      <div class="header-subtitle">台南輕鋼架團隊</div>
     </div>
   </header>
 
@@ -312,5 +296,3 @@
   </footer>
 </body>
 </html>
-
-
