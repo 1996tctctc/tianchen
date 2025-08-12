@@ -49,8 +49,9 @@
       margin: 5px 0;
     }
 
+    /* LINE 容器固定右側 */
     .line-container {
-      text-align: right; /* 手機 & 電腦都固定右側 */
+      text-align: right;
       margin-top: 10px;
     }
 
@@ -59,7 +60,7 @@
       height: 144px;
     }
 
-    /* 版權前圖片區塊 */
+    /* 版權前圖片區塊，手機預設直排 */
     .footer-images {
       display: flex;
       flex-direction: column;
@@ -73,23 +74,19 @@
       height: auto;
     }
 
-   /* 電腦版圖片橫排並等高 */
-@media screen and (min-width: 1024px) {
-  .footer-images {
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch; /* 讓子元素高度一致 */
-  }
-  .footer-images img {
-    max-width: 300px;
-    height: auto;
-    object-fit: contain; /* 保持比例 */
-    flex-grow: 1; /* 讓圖片在同一行撐開 */
-  }
-}
+    /* 電腦版樣式 */
+    @media screen and (min-width: 1024px) {
+      html {
+        zoom: 1.5; /* Chrome/Edge/Safari */
+      }
+      @-moz-document url-prefix() {
+        html {
+          -moz-transform: scale(1.5); /* Firefox */
+          -moz-transform-origin: 0 0;
+        }
+      }
 
-
-      /* 關於我們到地址置中（LINE 除外） */
+      /* 電腦版關於我們到地址置中，LINE 除外 */
       section:not(.contact-section) {
         text-align: center;
       }
@@ -98,13 +95,17 @@
         text-align: left;
       }
 
-      /* 電腦版圖片橫排 */
+      /* 電腦版圖片橫排並等高 */
       .footer-images {
         flex-direction: row;
         justify-content: center;
+        align-items: stretch;
       }
       .footer-images img {
-        max-width: 300px; /* 電腦版縮小圖片 */
+        max-width: 300px;
+        height: auto;
+        object-fit: contain;
+        flex-grow: 1;
       }
     }
   </style>
@@ -119,7 +120,7 @@
   </header>
 
   <marquee class="marquee" scrollamount="8">
-    免費估價 歡迎來電0937491640      免費估價 歡迎來電0937491640      免費估價 歡迎來電0937491640     
+    免費估價 歡迎來電0937491640      免費估價 歡迎來電0937491640      免費估價 歡迎來電0937491640      
   </marquee>
 
   <section>
@@ -162,9 +163,9 @@
 
   <!-- 版權前的三張圖片 -->
   <div class="footer-images">
-    <img src="images_tc/tc1.gif" alt="動態圖片 tc1">
-    <img src="images_tc/tc4.gif" alt="動態圖片 tc4">
-    <img src="images_tc/tc5.gif" alt="動態圖片 tc5">
+    <img src="images_tc/tc1.gif" alt="動態圖片 tc1" />
+    <img src="images_tc/tc4.gif" alt="動態圖片 tc4" />
+    <img src="images_tc/tc5.gif" alt="動態圖片 tc5" />
   </div>
 
   <footer>
@@ -172,4 +173,3 @@
   </footer>
 </body>
 </html>
-
