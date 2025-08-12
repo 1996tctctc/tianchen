@@ -12,7 +12,8 @@
     body {
       font-family: "標楷體", "DFKai-SB", "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "PingFang TC", serif;
       margin: 0; padding: 0;
-      font-size: 18px; line-height: 1.6;
+      font-size: 18px;
+      line-height: 1.6;
     }
     header {
       display: flex; align-items: center; justify-content: center;
@@ -35,13 +36,12 @@
       margin: 6px 0;
     }
     .contact-section {
-      text-align: left; font-size: 18px;
+      text-align: left;
+      font-size: 18px;
     }
     .contact-section .contact-item {
       text-align: left;
     }
-
-    /* 電腦版固定右側LINE */
     .line-container {
       position: fixed;
       top: 50%;
@@ -71,8 +71,6 @@
       font-size: 1.1em;
       user-select: none;
     }
-
-    /* 版權前圖片區塊，手機預設直排 */
     .footer-images {
       display: flex; flex-direction: column;
       align-items: center; gap: 12px; margin: 24px 0;
@@ -80,8 +78,6 @@
     .footer-images img {
       max-width: 100%; height: auto;
     }
-
-    /* 關於我們美化區塊 */
     .about-text {
       background-color: #f9f9f9;
       border-radius: 8px;
@@ -101,8 +97,6 @@
     .about-text strong {
       color: #222; font-weight: 700;
     }
-
-    /* 電腦版樣式 */
     @media screen and (min-width: 1024px) {
       html {
         zoom: 1.5;
@@ -138,13 +132,10 @@
         flex-grow: 1;
       }
     }
-
-    /* 手機版調整 */
     @media screen and (max-width: 768px) {
-      .contact-section {
-        text-align: center;
-      }
+      .contact-section,
       .contact-section .contact-item {
+        font-size: 16px !important;
         text-align: center;
       }
       .line-container {
@@ -154,7 +145,7 @@
         box-shadow: none;
       }
       .line-container .line-id-text {
-        display: none; /* 隱藏文字 */
+        display: none;
       }
       .line-icon {
         width: 80px;
