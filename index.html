@@ -16,7 +16,6 @@
       line-height: 1.6;
     }
 
-    /* header 放大調整 */
     header {
       display: flex;
       justify-content: center;
@@ -26,36 +25,43 @@
 
     .header-inner {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 20px;
       max-width: 600px;
       width: 100%;
+    }
+
+    /* 上排：logo + 天宸輕鋼架 */
+    .header-top {
+      display: flex;
+      align-items: center;
       justify-content: center;
+      gap: 20px;
+      width: 100%;
     }
 
     #logo {
       max-height: 120px;
       width: auto;
       vertical-align: middle;
+      flex-shrink: 0;
     }
 
-    .header-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: left;
-    }
-
-    .header-text h1 {
+    .header-top h1 {
       margin: 0;
       font-size: 2.8em;
       line-height: 1.1;
+      white-space: nowrap;
     }
 
-    .subtitle {
+    /* 下排：「台南輕鋼架施工團隊」 */
+    .header-subtitle {
       font-size: 1.4em;
       color: #666;
-      margin: 0;
+      margin-top: 8px;
+      margin-left: calc(120px + 20px); /* logo寬度約120px + gap 20px */
+      width: fit-content;
+      text-align: left;
     }
 
     /* 跑馬燈滿版 */
@@ -168,42 +174,17 @@
 
     /* 手機版調整 */
     @media screen and (max-width: 768px) {
-      /* header 改成上下排列，置中 */
-      .header-inner {
-        flex-direction: column;
-        align-items: center;
-        max-width: 100%;
-        padding: 0 10px;
-        gap: 8px;
-      }
-      .header-top {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        width: 100%;
-        justify-content: center;
-      }
       #logo {
         max-height: 70px;
-        flex-shrink: 0;
       }
-      .header-text {
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-        text-align: center;
-      }
-      .header-text h1 {
+
+      .header-top h1 {
         font-size: 2.1em;
-        margin: 0;
       }
+
       .header-subtitle {
         font-size: 1em;
-        color: #666;
-        margin: 0;
-        padding-left: 0;
-        width: 100%;
-        text-align: center;
+        margin-left: calc(70px + 12px);
       }
 
       .about-text-single-line {
@@ -246,15 +227,6 @@
       }
     }
 
-    @media screen and (max-width: 768px) {
-      .header-inner {
-        justify-content: center;
-      }
-      #logo {
-        max-height: 70px;
-      }
-    }
-
     @media screen and (min-width: 1024px) {
       html {
         zoom: 1.5;
@@ -277,9 +249,7 @@
     <div class="header-inner">
       <div class="header-top">
         <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
-        <div class="header-text">
-          <h1>天宸輕鋼架</h1>
-        </div>
+        <h1>天宸輕鋼架</h1>
       </div>
       <div class="header-subtitle">台南輕鋼架施工團隊</div>
     </div>
