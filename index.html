@@ -38,7 +38,6 @@
       color: #555;
     }
 
-    /* 跑馬燈樣式 */
     .marquee {
       background-color: yellow;
       color: red;
@@ -51,7 +50,7 @@
     }
 
     .line-container {
-      text-align: right; /* 手機 & 電腦都固定在右邊 */
+      text-align: right; /* 手機 & 電腦都固定右側 */
       margin-top: 10px;
     }
 
@@ -60,7 +59,7 @@
       height: 144px;
     }
 
-    /* 圖片區塊樣式 */
+    /* 版權前圖片區塊 */
     .footer-images {
       display: flex;
       flex-direction: column;
@@ -74,10 +73,10 @@
       height: auto;
     }
 
-    /* 電腦版才啟用縮放與置中 */
+    /* 電腦版樣式 */
     @media screen and (min-width: 1024px) {
       html {
-        zoom: 1.5; /* Chrome、Edge、Safari */
+        zoom: 1.5; /* Chrome/Edge/Safari */
       }
       @-moz-document url-prefix() {
         html {
@@ -86,8 +85,8 @@
         }
       }
 
-      /* 電腦版置中關於我們到地址 */
-      section {
+      /* 關於我們到地址置中（LINE 除外） */
+      section:not(.contact-section) {
         text-align: center;
       }
       section ul {
@@ -95,9 +94,13 @@
         text-align: left;
       }
 
-      /* 電腦版限制圖片寬度 */
+      /* 電腦版圖片橫排 */
+      .footer-images {
+        flex-direction: row;
+        justify-content: center;
+      }
       .footer-images img {
-        max-width: 400px;
+        max-width: 300px; /* 電腦版縮小圖片 */
       }
     }
   </style>
@@ -112,8 +115,8 @@
   </header>
 
   <marquee class="marquee" scrollamount="8">
-    免費估價 歡迎來電0937491640    免費估價 歡迎來電0937491640    免費估價 歡迎來電0937491640
-    </marquee>
+    免費估價 歡迎來電0937491640      免費估價 歡迎來電0937491640      免費估價 歡迎來電0937491640     
+  </marquee>
 
   <section>
     <h2>關於我們</h2>
@@ -135,7 +138,7 @@
     </ul>
   </section>
 
-  <section>
+  <section class="contact-section">
     <h2>聯絡我們</h2>
     <div class="contact-item">
       電話：<a href="tel:0937491640">0937491640</a>
@@ -153,7 +156,7 @@
     </div>
   </section>
 
-  <!-- 版權前的圖片區塊 -->
+  <!-- 版權前的三張圖片 -->
   <div class="footer-images">
     <img src="images_tc/tc1.gif" alt="動態圖片 tc1">
     <img src="images_tc/tc4.gif" alt="動態圖片 tc4">
