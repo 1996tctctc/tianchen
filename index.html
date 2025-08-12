@@ -17,25 +17,24 @@
       line-height: 1.6;
     }
 
-    /* header 放大調整 */
     header {
       display: flex;
       justify-content: center;
-      padding: 20px 0; /* 放大間距 */
+      padding: 20px 0;
       text-align: center;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
-      gap: 20px; /* 間距加大 */
-      max-width: 600px; /* 放大寬度 */
+      gap: 12px;
+      max-width: 600px;
       width: 100%;
       justify-content: center;
     }
 
     #logo {
-      max-height: 120px; /* 放大logo */
+      max-height: 90px;
       width: auto;
       vertical-align: middle;
     }
@@ -49,17 +48,16 @@
 
     .header-text h1 {
       margin: 0;
-      font-size: 2.8em; /* 放大標題字 */
+      font-size: 2em;
       line-height: 1.1;
     }
 
     .subtitle {
-      font-size: 1.4em; /* 放大副標 */
+      font-size: 1em;
       color: #666;
       margin: 0;
     }
 
-    /* 跑馬燈滿版 */
     .marquee {
       display: block;
       width: 100%;
@@ -71,7 +69,6 @@
       overflow: hidden;
     }
 
-    /* 關於我們段落 */
     .about-text-single-line {
       max-width: 720px;
       margin: 24px auto;
@@ -86,7 +83,6 @@
       box-shadow: none;
     }
 
-    /* 聯絡我們區 */
     .contact-section {
       font-size: 18px;
       max-width: 720px;
@@ -97,7 +93,6 @@
       text-align: left;
     }
 
-    /* 手機版專用 Line ID 顯示 */
     .line-id-mobile {
       display: none;
       margin-top: 4px;
@@ -105,7 +100,6 @@
       color: #000;
     }
 
-    /* LINE 區塊 150x150 */
     .line-container {
       position: fixed;
       top: 50%;
@@ -114,7 +108,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: none; /* 背景透明 */
+      background: none;
       padding: 0;
       border-radius: 0;
       box-shadow: none;
@@ -142,23 +136,19 @@
     }
 
     @media screen and (max-width: 768px) {
-      /* header 內容維持一行置中 */
       .header-inner {
-        max-width: 100%;
-        padding: 0 10px;
-        gap: 12px;
+        gap: 20px;
       }
       #logo {
-        max-height: 70px;
+        max-height: 120px;
       }
       .header-text h1 {
-        font-size: 1.6em;
+        font-size: 2.8em;
       }
       .subtitle {
-        font-size: 1em;
+        font-size: 1.4em;
       }
 
-      /* 關於我們手機版優化 */
       .about-text-single-line {
         font-size: 1em;
         padding: 12px;
@@ -167,7 +157,6 @@
         text-align: left;
       }
 
-      /* LINE 區塊手機版改位置並縮小 */
       .line-container {
         bottom: 10px;
         top: auto;
@@ -181,17 +170,14 @@
         width: 60px;
         height: 60px;
       }
-      /* 手機版隱藏 line-container 的文字 */
       .line-container .line-id-text {
         display: none;
       }
-      /* 手機版聯絡我們新增 Line ID */
       .line-id-mobile {
         display: block;
       }
     }
 
-    /* footer 圖片 */
     .footer-images {
       display: flex;
       flex-direction: column;
@@ -257,7 +243,7 @@
   </marquee>
 
   <section>
-    <h2>🔨關於我們</h2>
+    <h2>關於我們</h2>
     <p class="about-text-single-line">
       天宸輕鋼架位於台南，擁有豐富經驗，服務學校、企業、月子中心、飯店、民宿與住宅等多元場域。<br />
       我們提供專業施工與免費估價，歡迎隨時洽詢了解！
@@ -265,7 +251,7 @@
   </section>
 
   <section class="contact-section">
-    <h2>🔨聯絡我們</h2>
+    <h2>聯絡我們</h2>
     <div class="contact-item">
       電話：<a href="tel:0936797580">0936797580</a><br />
       <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer" style="color: #000; text-decoration: underline; font-weight: 600;">
@@ -283,7 +269,7 @@
 
   <div class="line-container">
     <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer">
-      <img src="images_tc/tc7.gif" alt="LINE" class="line-icon" />
+      <img src="images_tc/tc7.png" alt="LINE" class="line-icon" />
     </a>
     <div class="line-id-text">天宸輕鋼架</div>
     <div class="line-id-text">Line ID: @155aarli</div>
@@ -300,5 +286,3 @@
   </footer>
 </body>
 </html>
-
-
