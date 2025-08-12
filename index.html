@@ -15,6 +15,8 @@
       font-family: "標楷體", "DFKai-SB", "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "PingFang TC", serif;
       margin: 0;
       padding: 0;
+      font-size: 18px; /* 放大2px，預設16px升到18px */
+      line-height: 1.6;
     }
 
     header {
@@ -23,38 +25,39 @@
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      padding: 10px 0;
+      padding: 12px 0; /* 增加一點上下內距 */
     }
 
     #logo {
-      max-height: 60px;
+      max-height: 65px; /* 比之前稍微大一點 */
       vertical-align: middle;
     }
 
     header h1 {
       margin: 0;
-      font-size: 3em;
+      font-size: 3.4em; /* 原3em放大約2px */
     }
 
     .subtitle {
-      font-size: 1.5em;
+      font-size: 1.7em; /* 從1.5em放大 */
       color: #555;
     }
 
     .marquee {
       background-color: yellow;
       color: red;
-      font-size: 1.2em;
-      padding: 5px 0;
+      font-size: 1.3em; /* 放大 */
+      padding: 6px 0;
     }
 
     .contact-item {
-      margin: 5px 0;
+      margin: 6px 0;
     }
 
     /* 手機版聯絡我們左對齊 */
     .contact-section {
       text-align: left;
+      font-size: 18px; /* 放大 */
     }
     .contact-section .contact-item {
       text-align: left;
@@ -70,25 +73,26 @@
       flex-direction: column;
       align-items: flex-end;
       background: rgba(255, 255, 255, 0.9);
-      padding: 8px 12px;
+      padding: 10px 14px;
       border-radius: 8px 0 0 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       z-index: 9999;
       text-align: center;
-      min-width: 160px;
+      min-width: 180px;
+      font-size: 18px;
     }
 
     .line-icon {
-      width: 144px;
-      height: 144px;
+      width: 150px;
+      height: 150px;
       cursor: pointer;
     }
 
     .line-id-text {
-      margin-top: 6px;
+      margin-top: 8px;
       font-weight: 600;
       color: #000;
-      font-size: 1em;
+      font-size: 1.1em;
       user-select: none;
       text-align: center;
     }
@@ -98,8 +102,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
-      margin: 20px 0;
+      gap: 12px;
+      margin: 24px 0;
     }
 
     .footer-images img {
@@ -111,19 +115,19 @@
     .about-text {
       background-color: #f9f9f9; /* 淺灰底 */
       border-radius: 8px;
-      padding: 20px 25px;
+      padding: 24px 30px;
       max-width: 720px;
-      margin: 20px auto;
+      margin: 24px auto;
       color: #444;
-      font-size: 1.15em;
-      line-height: 1.7;
+      font-size: 1.3em;
+      line-height: 1.8;
       letter-spacing: 0.04em;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
     }
 
     .about-text p {
-      margin: 12px 0;
+      margin: 14px 0;
     }
 
     .about-text strong {
@@ -177,8 +181,8 @@
     /* 手機版縮小LINE圖示 */
     @media screen and (max-width: 768px) {
       .line-icon {
-        width: 72px;
-        height: 72px;
+        width: 80px;
+        height: 80px;
       }
     }
   </style>
@@ -254,8 +258,7 @@
   </div>
 
   <footer>
-    <p style="text-align: center;">©2025天宸輕鋼架. 版權所有.</p>
+    <p style="text-align: center; font-size: 18px;">©2025天宸輕鋼架. 版權所有.</p>
   </footer>
 </body>
 </html>
-
