@@ -55,14 +55,23 @@
     }
 
     /* 下排：「台南輕鋼架施工團隊」 */
-    .header-subtitle {
-      font-size: 1.4em;
-      color: #666;
-      margin-top: 8px;
-      margin-left: calc(120px + 20px); /* logo寬度約120px + gap 20px */
-      width: fit-content;
-      text-align: left;
-    }
+   .header-subtitle {
+  font-size: 1.4em;
+  color: #666;
+  margin-top: 8px;
+  margin-left: 60px; /* 原本是 calc(120px + 20px)，改成60px */
+  width: fit-content;
+  text-align: left;
+}
+
+/* 手機版 */
+@media screen and (max-width: 768px) {
+  .header-subtitle {
+    font-size: 1em;
+    margin-left: 35px; /* 原本 calc(70px + 12px)，改成35px */
+  }
+}
+
 
     /* 跑馬燈滿版 */
     .marquee {
@@ -303,4 +312,5 @@
   </footer>
 </body>
 </html>
+
 
