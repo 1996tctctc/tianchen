@@ -48,14 +48,6 @@
       width: auto;
       flex-shrink: 0;
     }
-    /* 手機版可點擊 logo */
-    .mobile-logo-link {
-      display: none;
-    }
-    .mobile-logo-link img {
-      max-height: 70px;
-      width: auto;
-    }
     .header-text-group {
       display: flex;
       flex-direction: column;
@@ -184,10 +176,7 @@
     }
     @media screen and (max-width: 768px) {
       #logo {
-        display: none; /* 手機版隱藏電腦版logo */
-      }
-      .mobile-logo-link {
-        display: inline-block; /* 手機版顯示可點擊logo */
+        max-height: 70px;
       }
       .header-text-group h1 {
         font-size: 2.1em;
@@ -269,12 +258,7 @@
   <header>
     <div class="header-inner">
       <div class="header-content">
-        <!-- 電腦版 logo -->
         <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
-        <!-- 手機版可點擊 logo -->
-        <a href="https://your-link.com" class="mobile-logo-link">
-          <img src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
-        </a>
         <div class="header-text-group">
           <h1>天宸輕鋼架</h1>
           <div class="header-subtitle">台南輕鋼架施工團隊</div>
