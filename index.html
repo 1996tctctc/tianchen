@@ -73,17 +73,21 @@
       height: auto;
     }
 
-    /* 電腦版樣式 */
-    @media screen and (min-width: 1024px) {
-      html {
-        zoom: 1.5; /* Chrome/Edge/Safari */
-      }
-      @-moz-document url-prefix() {
-        html {
-          -moz-transform: scale(1.5); /* Firefox */
-          -moz-transform-origin: 0 0;
-        }
-      }
+   /* 電腦版圖片橫排並等高 */
+@media screen and (min-width: 1024px) {
+  .footer-images {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch; /* 讓子元素高度一致 */
+  }
+  .footer-images img {
+    max-width: 300px;
+    height: auto;
+    object-fit: contain; /* 保持比例 */
+    flex-grow: 1; /* 讓圖片在同一行撐開 */
+  }
+}
+
 
       /* 關於我們到地址置中（LINE 除外） */
       section:not(.contact-section) {
@@ -168,3 +172,4 @@
   </footer>
 </body>
 </html>
+
