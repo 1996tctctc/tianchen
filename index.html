@@ -71,6 +71,16 @@
       overflow: hidden;
     }
 
+    /* 置中所有 section */
+    section {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    section h2 {
+      text-align: center;
+    }
+
     /* 關於我們段落 */
     .about-text-single-line {
       max-width: 720px;
@@ -91,10 +101,10 @@
       font-size: 18px;
       max-width: 720px;
       margin: 0 auto;
-      text-align: center; /* 置中 */
+      text-align: center;
     }
     .contact-section .contact-item {
-      text-align: center; /* 置中 */
+      text-align: center;
     }
 
     /* 手機版專用 Line ID 顯示 */
@@ -200,14 +210,6 @@
           -moz-transform: scale(1.5);
           -moz-transform-origin: 0 0;
         }
-      }
-      section {
-        max-width: 720px;
-        margin: 0 auto;
-        text-align: center;
-      }
-      section:not(.contact-section) {
-        text-align: center;
       }
       section ul {
         display: inline-block;
