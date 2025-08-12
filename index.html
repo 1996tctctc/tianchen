@@ -49,16 +49,14 @@
       margin: 5px 0;
     }
 
-    /* 聯絡我們整區置中 */
+    /* 手機版聯絡我們左對齊 */
     .contact-section {
-      text-align: center;
+      text-align: left;
     }
-    /* 聯絡資訊置中 */
     .contact-section .contact-item {
-      margin: 5px 0;
-      text-align: center;
+      text-align: left;
     }
-    /* LINE 圖示保持右側 */
+    /* LINE 圖示固定右側 */
     .contact-section .line-container {
       text-align: right;
       margin-top: 10px;
@@ -95,13 +93,21 @@
         }
       }
 
-      /* 電腦版關於我們到地址置中，LINE 除外 */
+      /* 電腦版關於我們到地址置中 */
       section:not(.contact-section) {
         text-align: center;
       }
       section ul {
         display: inline-block;
         text-align: left;
+      }
+
+      /* 電腦版聯絡我們置中 */
+      .contact-section {
+        text-align: center;
+      }
+      .contact-section .contact-item {
+        text-align: center;
       }
 
       /* 電腦版圖片橫排並等高 */
