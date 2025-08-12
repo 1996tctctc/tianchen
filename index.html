@@ -17,25 +17,25 @@
       line-height: 1.6;
     }
 
-    /* header 區塊 */
+    /* header 放大調整 */
     header {
       display: flex;
       justify-content: center;
-      padding: 12px 0;
+      padding: 20px 0; /* 放大間距 */
       text-align: center;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
-      gap: 12px;
-      max-width: 480px;
+      gap: 20px; /* 間距加大 */
+      max-width: 600px; /* 放大寬度 */
       width: 100%;
-      justify-content: center; /* 整體置中 */
+      justify-content: center;
     }
 
     #logo {
-      max-height: 70px;
+      max-height: 120px; /* 放大logo */
       width: auto;
       vertical-align: middle;
     }
@@ -44,17 +44,17 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      text-align: left; /* 文字靠左，讓它和logo排一行 */
+      text-align: left;
     }
 
     .header-text h1 {
       margin: 0;
-      font-size: 1.8em;
+      font-size: 2.8em; /* 放大標題字 */
       line-height: 1.1;
     }
 
     .subtitle {
-      font-size: 1em;
+      font-size: 1.4em; /* 放大副標 */
       color: #666;
       margin: 0;
     }
@@ -146,16 +146,16 @@
       .header-inner {
         max-width: 100%;
         padding: 0 10px;
-        justify-content: center;
+        gap: 12px;
       }
       #logo {
-        max-height: 50px;
+        max-height: 70px;
       }
       .header-text h1 {
-        font-size: 1.4em;
+        font-size: 1.6em;
       }
       .subtitle {
-        font-size: 0.9em;
+        font-size: 1em;
       }
 
       /* 關於我們手機版優化 */
