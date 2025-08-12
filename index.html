@@ -69,15 +69,39 @@
       height: auto;
     }
 
-    /* 電腦版固定 150% 畫面比例 */
+    /* 新增：底部圖片區塊 */
+    .footer-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 20px 0;
+    }
+
+    .footer-images img {
+      max-width: 90%;
+      height: auto;
+      display: block;
+    }
+
+    /* 電腦版固定 150% 畫面比例 + 寬度修正 */
     @media screen and (min-width: 1024px) {
       html {
         zoom: 1.5; /* Chrome、Edge、Safari */
+        overflow-x: hidden;
+      }
+      body {
+        overflow-x: hidden;
       }
       @-moz-document url-prefix() {
         html {
-          -moz-transform: scale(1.5); /* Firefox */
+          -moz-transform: scale(1.5);
           -moz-transform-origin: 0 0;
+          width: calc(100% / 1.5);
+          overflow-x: hidden;
+        }
+        body {
+          overflow-x: hidden;
         }
       }
     }
@@ -135,7 +159,12 @@
     </div>
   </section>
 
-  <img id="fixed-gif" src="images_tc/tc1.gif" alt="動態圖片" />
+  <!-- 新增底部圖片 -->
+  <div class="footer-images">
+    <img src="images_tc/tc1.gif" alt="動態圖片 tc1">
+    <img src="images_tc/tc4.jpg" alt="動態圖片 tc4">
+    <img src="images_tc/tc5.jpg" alt="動態圖片 tc5">
+  </div>
 
   <footer>
     <p>©2025天宸輕鋼架. 版權所有.</p>
