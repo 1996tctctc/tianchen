@@ -84,16 +84,28 @@
       height: auto;
     }
 
-    /* 關於我們美化文字 */
-    section p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      color: #333;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 0 10px;
+    /* 關於我們美化區塊 */
+    .about-text {
+      background-color: #f9f9f9; /* 淺灰底 */
+      border-radius: 8px;
+      padding: 20px 25px;
+      max-width: 720px;
+      margin: 20px auto;
+      color: #444;
+      font-size: 1.15em;
+      line-height: 1.7;
+      letter-spacing: 0.04em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
-      letter-spacing: 0.05em;
+    }
+
+    .about-text p {
+      margin: 12px 0;
+    }
+
+    .about-text strong {
+      color: #222;
+      font-weight: 700;
     }
 
     /* 電腦版樣式 */
@@ -155,10 +167,10 @@
 
   <section>
     <h2>關於我們</h2>
-    <p>
-      天宸輕鋼架位於台南，擁有豐富經驗，服務學校、企業、月子中心、飯店、民宿與住宅等多元場域。<br />
-      我們提供專業施工與免費估價，歡迎隨時洽詢了解！
-    </p>
+    <div class="about-text">
+      <p><strong>天宸輕鋼架</strong>位於台南，擁有豐富經驗，專業服務學校、企業、月子中心、飯店、民宿與住宅等多元場域。</p>
+      <p>我們提供高品質施工與免費估價，歡迎隨時與我們聯繫，了解更多詳情！</p>
+    </div>
   </section>
 
   <section>
@@ -183,8 +195,8 @@
     </div>
     <div class="contact-item">
       地址：
-      <a href="https://www.google.com/maps/dir/?api=1&destination=台南市南區明興路" target="_blank" rel="noopener noreferrer">
-        台南市南區明興路
+      <a href="https://www.google.com/maps/dir/?api=1&destination=天宸輕鋼架" target="_blank" rel="noopener noreferrer">
+        天宸輕鋼架
       </a>
     </div>
     <div class="line-container">
@@ -206,4 +218,3 @@
   </footer>
 </body>
 </html>
-
