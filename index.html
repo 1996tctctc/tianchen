@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>台南輕鋼架專業施工 | 天宸輕鋼架</title>
   <meta name="description" content="天宸輕鋼架，台南在地輕鋼架、天花板與隔間施工，品質保證，免費估價。" />
-  
   <link rel="icon" href="images_tc/tc2.jpg" type="image/jpeg" />
 
   <style>
@@ -47,35 +46,18 @@
       padding: 5px 0;
     }
 
-    /* 聯絡資訊樣式 */
     .contact-item {
       margin: 5px 0;
     }
 
     .line-container {
-      text-align: center;
+      text-align: right; /* 手機 & 電腦都固定在右邊 */
       margin-top: 10px;
     }
 
     .line-icon {
       width: 144px;
       height: 144px;
-    }
-
-    #fixed-gif {
-      display: block;
-      margin: 20px auto;
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* 關於我們到地址置中 */
-    section {
-      text-align: center;
-    }
-    section ul {
-      display: inline-block;
-      text-align: left;
     }
 
     /* 圖片區塊樣式 */
@@ -92,7 +74,7 @@
       height: auto;
     }
 
-    /* 電腦版縮放與圖片寬度限制 */
+    /* 電腦版才啟用縮放與置中 */
     @media screen and (min-width: 1024px) {
       html {
         zoom: 1.5; /* Chrome、Edge、Safari */
@@ -103,6 +85,17 @@
           -moz-transform-origin: 0 0;
         }
       }
+
+      /* 電腦版置中關於我們到地址 */
+      section {
+        text-align: center;
+      }
+      section ul {
+        display: inline-block;
+        text-align: left;
+      }
+
+      /* 電腦版限制圖片寬度 */
       .footer-images img {
         max-width: 400px;
       }
@@ -118,10 +111,9 @@
     </div>
   </header>
 
-  <!-- 跑馬燈 -->
   <marquee class="marquee" scrollamount="8">
-    免費估價 歡迎來電0937491640    免費估價 歡迎來電0937491640    免費估價 歡迎來電0937491640    
-  </marquee>
+    免費估價 歡迎來電0937491640    免費估價 歡迎來電0937491640    免費估價 歡迎來電0937491640
+    </marquee>
 
   <section>
     <h2>關於我們</h2>
@@ -164,8 +156,8 @@
   <!-- 版權前的圖片區塊 -->
   <div class="footer-images">
     <img src="images_tc/tc1.gif" alt="動態圖片 tc1">
-    <img src="images_tc/tc4.jpg" alt="圖片 tc4">
-    <img src="images_tc/tc5.jpg" alt="圖片 tc5">
+    <img src="images_tc/tc4.gif" alt="動態圖片 tc4">
+    <img src="images_tc/tc5.gif" alt="動態圖片 tc5">
   </div>
 
   <footer>
@@ -173,4 +165,3 @@
   </footer>
 </body>
 </html>
-
