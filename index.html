@@ -13,11 +13,11 @@
       font-family: "標楷體", "DFKai-SB", "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "PingFang TC", serif;
       margin: 0;
       padding: 0;
-      font-size: 18px; /* 全站預設字體18px */
+      font-size: 18px;
       line-height: 1.6;
     }
 
-    /* 整體header容器縮小一點 */
+    /* header */
     header {
       display: flex;
       justify-content: center;
@@ -29,12 +29,11 @@
     .header-inner {
       display: flex;
       align-items: center;
-      gap: 12px; /* 間距縮小 */
+      gap: 12px;
       width: 100%;
-      max-width: 480px; /* 縮小整個區域 */
+      max-width: 480px;
     }
 
-    /* logo 放大到90px */
     #logo {
       max-height: 90px;
       vertical-align: middle;
@@ -44,12 +43,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-    }
-
-    .header-title, .header-subtitle {
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
     }
 
     header h1 {
@@ -63,32 +56,55 @@
       margin: 0;
     }
 
+    /* 跑馬燈滿版 */
     .marquee {
+      display: block;
+      width: 100%;
       background-color: yellow;
       color: red;
       font-size: 1.3em;
       padding: 6px 0;
-      width: 100%;
       box-sizing: border-box;
+      overflow: hidden;
     }
 
-    .contact-item {
-      margin: 6px 0;
+    /* 關於我們段落 */
+    .about-text-single-line {
+      max-width: 720px;
+      margin: 24px auto;
+      color: #444;
+      font-size: 1.3em;
+      line-height: 1.8;
+      letter-spacing: 0.04em;
+      text-align: center;
+      white-space: normal;
+      overflow: visible;
+      padding: 16px 20px;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
     }
 
     /* 聯絡我們區 */
     .contact-section {
-      font-size: 18px; /* 預設18px */
+      font-size: 18px;
       max-width: 720px;
       margin: 0 auto;
-      text-align: left; /* 預設靠左 */
+      text-align: left;
     }
     .contact-section .contact-item {
       text-align: left;
     }
 
-    /* 手機版聯絡我們區字體維持16px且靠左 */
+    /* 手機版優化 */
     @media screen and (max-width: 768px) {
+      .about-text-single-line {
+        font-size: 1em;
+        padding: 12px 12px;
+        margin: 16px auto;
+        line-height: 1.7;
+        text-align: left;
+      }
       .contact-section {
         font-size: 16px !important;
         text-align: left !important;
@@ -97,7 +113,7 @@
       }
     }
 
-    /* LINE 區塊 電腦版固定右側，整體尺寸小一點 */
+    /* LINE 區塊 */
     .line-container {
       position: fixed;
       top: 50%;
@@ -130,7 +146,6 @@
       text-align: center;
     }
 
-    /* 手機版LINE區塊只顯示圖示，文字隱藏 */
     @media screen and (max-width: 768px) {
       .line-container {
         position: fixed;
@@ -151,10 +166,11 @@
         height: 80px;
       }
       .line-id-text {
-        display: none; /* 文字隱藏 */
+        display: none;
       }
     }
 
+    /* footer 圖片 */
     .footer-images {
       display: flex;
       flex-direction: column;
@@ -162,38 +178,9 @@
       gap: 12px;
       margin: 24px 0;
     }
-
     .footer-images img {
       max-width: 100%;
       height: auto;
-    }
-
-    .about-text-single-line {
-      max-width: 720px;
-      margin: 24px auto;
-      color: #444;
-      font-size: 1.3em;
-      line-height: 1.8;
-      letter-spacing: 0.04em;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-      white-space: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      padding: 24px 30px;
-      border-radius: 8px;
-    }
-
-    @media screen and (max-width: 768px) {
-      .about-text-single-line {
-        white-space: normal;
-        font-size: 1em;
-        padding: 16px 12px;
-        box-shadow: none;
-        max-width: 100%;
-        margin: 16px auto;
-        color: #444;
-      }
     }
 
     @media screen and (min-width: 1024px) {
@@ -206,7 +193,6 @@
           -moz-transform-origin: 0 0;
         }
       }
-
       section:not(.contact-section) {
         text-align: center;
       }
@@ -214,14 +200,12 @@
         display: inline-block;
         text-align: left;
       }
-
       .contact-section {
         text-align: center;
       }
       .contact-section .contact-item {
         text-align: center;
       }
-
       .footer-images {
         flex-direction: row;
         justify-content: center;
@@ -241,18 +225,14 @@
     <div class="header-inner">
       <img id="logo" src="images_tc/tc2.jpg" alt="天宸輕鋼架 Logo" />
       <div class="header-text">
-        <div class="header-title">
-          <h1>天宸輕鋼架</h1>
-        </div>
-        <div class="header-subtitle">
-          <div class="subtitle">台南輕鋼架施工專業團隊</div>
-        </div>
+        <h1>天宸輕鋼架</h1>
+        <div class="subtitle">台南輕鋼架施工專業團隊</div>
       </div>
     </div>
   </header>
 
   <marquee class="marquee" scrollamount="8">
-    免費估價 歡迎來電0936797580      免費估價 歡迎來電0936797580      免費估價 歡迎來電0936797580      
+    免費估價 歡迎來電0936797580 免費估價 歡迎來電0936797580 免費估價 歡迎來電0936797580
   </marquee>
 
   <section>
@@ -281,7 +261,7 @@
     </div>
   </section>
 
-  <div class="line-container" >
+  <div class="line-container">
     <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer">
       <img src="images_tc/tc3.png" alt="LINE" class="line-icon" />
     </a>
@@ -300,6 +280,3 @@
   </footer>
 </body>
 </html>
-
-
-
