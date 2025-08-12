@@ -41,6 +41,7 @@
       max-width: 600px;
       width: 100%;
       box-sizing: border-box;
+      flex-direction: row; /* 預設水平排列 */
     }
     .logo-link {
       display: inline-block;
@@ -168,24 +169,25 @@
       height: auto;
       display: block;
     }
-    footer p {
-  text-align: left; /* 靠左 */
-  font-size: 12px;
-  margin: 12px 0 24px 0;
-  max-width: 720px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 10px;
-}
+    footer p {   text-align: left; /* 靠左 */   
+              font-size: 12px;   
+              margin: 12px 0 24px 0;  
+              max-width: 720px;   
+              width: 100%;   b
+                ox-sizing: 
+              border-box;   
+              padding: 0 10px; }
 
+    /* 手機版保持 logo 大小與水平排列 */
     @media screen and (max-width: 768px) {
       #logo {
-        max-height: 70px;
+        max-height: 120px; /* 不縮小 */
       }
       .header-content {
-        flex-direction: column;
-        gap: 6px; /* 手機版上下間距較小 */
+        flex-direction: row;  /* 水平排列 */
+        gap: 20px;
         align-items: center;
+        justify-content: center;
       }
       .header-text-group h1 {
         font-size: 2.1em;
@@ -194,7 +196,7 @@
         font-size: 1em;
       }
       .header-inner {
-        padding: 10px 10px;
+        padding: 20px 0;
       }
       .about-text-single-line {
         font-size: 1em;
@@ -245,6 +247,7 @@
         margin: 8px 0 16px 0;
       }
     }
+
     @media screen and (min-width: 1024px) {
       html {
         zoom: 1.5;
@@ -325,4 +328,3 @@
   </footer>
 </body>
 </html>
-
