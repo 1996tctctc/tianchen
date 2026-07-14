@@ -6,25 +6,23 @@
   <title>台南輕鋼架施工 | 天宸輕鋼架</title>
   <meta name="description" content="天宸輕鋼架，台南在地輕鋼架、天花板與隔間施工，免費估價。" />
 
-  <!-- 修正後的分頁 Logo（只保留正確路徑，刪除衝突程式碼） -->
+  <!-- 1. 分頁 Logo 修正設定（刪除衝突的 favicon.png.ico） -->
   <link rel="icon" href="images_tc/tc2.ico" type="image/x-icon">
   <link rel="shortcut icon" href="images_tc/tc2.ico" type="image/x-icon">
 
-  <!-- PNG 格式（適用現代瀏覽器） -->
+  <!-- PNG 格式（適用現代瀏覽器與 Google 搜尋） -->
   <link rel="icon" type="image/png" sizes="32x32" href="images_tc/tc2_32.png">
   <link rel="icon" type="image/png" sizes="48x48" href="images_tc/tc2_48.png">
   <link rel="icon" type="image/png" sizes="96x96" href="images_tc/tc2_96.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images_tc/tc2_192.png">
 
-  <!-- Apple 裝置圖示 -->
+  <!-- Apple 裝置與 Android 支援 -->
   <link rel="apple-touch-icon" sizes="180x180" href="images_tc/tc2_180.png">
   <link rel="apple-touch-icon" sizes="152x152" href="images_tc/tc2_152.png">
   <link rel="apple-touch-icon" sizes="120x120" href="images_tc/tc2_120.png">
-
-  <!-- Android Chrome -->
   <link rel="manifest" href="manifest.json">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- 2. Google Ads 廣告追蹤（已精簡，僅保留一組） -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17943710033"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,7 +31,7 @@
     gtag('config', 'AW-17943710033');
   </script>
 
-  <!-- Event snippet for 點選通話 conversion page -->
+  <!-- LINE/電話 點選轉換事件 -->
   <script>
   function gtag_report_conversion(url) {
     var callback = function () {
@@ -51,48 +49,7 @@
   }
   </script>
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17943710033"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17943710033');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>台南輕鋼架施工 | 天宸輕鋼架</title>
-  <meta name="description" content="天宸輕鋼架，台南在地輕鋼架、天花板與隔間施工，免費估價。" />
-
-  <!-- 分頁 Logo（多尺寸支援） -->
-  <!-- 標準 Favicon -->
-  <link rel="icon" href="images_tc/tc2.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="images_tc/tc2.ico" type="image/x-icon">
-
-  <!-- PNG 格式（適用現代瀏覽器） -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images_tc/tc2_32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="images_tc/tc2_48.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="images_tc/tc2_96.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="images_tc/tc2_192.png">
-
-  <!-- Apple 裝置圖示（iPhone / iPad 主畫面捷徑） -->
-  <link rel="apple-touch-icon" sizes="180x180" href="images_tc/tc2_180.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images_tc/tc2_152.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images_tc/tc2_120.png">
-
-  <!-- Android Chrome -->
-  <link rel="manifest" href="manifest.json">
-
-  <style>
-    /* 這裡可以放你的網站 CSS */
-  </style>
-</head>
-<body>
-  <!-- 你的網站內容 -->
-</body>
-</html>
-
+  <!-- 3. 網頁樣式表（CSS 集中管理） -->
   <style>
     body {
       display: flex;
@@ -167,28 +124,46 @@
       box-sizing: border-box;
       overflow: hidden;
     }
+    
+    /* 關於我們與共用 section 樣式 */
     section {
-      text-align: center;
-      padding: 0 10px;
-      box-sizing: border-box;
+      max-width: 600px;
       margin: 0 auto 12px auto;
+      padding: 0 15px;
+      text-align: center;
+      box-sizing: border-box;
     }
     section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem; /* 縮小間距 */
-  text-align: center;
-}
+      font-size: 1.8rem;
+      margin-top: 20px;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .about-text {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      color: #333;
+      margin-top: 0;
+      text-align: center;
+      white-space: pre-line;
+    }
 
-.about-text {
-  font-size: 1.2rem; /* 放大字 */
-  line-height: 1.4; /* 緊湊行距 */
-  letter-spacing: 0.02em; /* 稍微調字距 */
-  color: #333;
-  margin-top: 0; /* 移除頂部間距 */
-  text-align: justify; /* 文字兩端對齊 */
-  white-space: pre-line; /* 保留換行 */
-}
+    /* 服務項目樣式 */
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .service-list li {
+      background-color: #f2f2f2;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      text-align: center;
+    }
 
+    /* 聯絡資訊樣式 */
     .contact-section {
       font-size: 18px;
       max-width: 720px;
@@ -208,6 +183,8 @@
       font-weight: 600;
       color: #000;
     }
+
+    /* 右側 LINE 懸浮按鈕 */
     .line-container {
       position: fixed;
       top: 50%;
@@ -240,6 +217,8 @@
       text-align: center;
       line-height: 1.2;
     }
+
+    /* 頁尾實績動態圖 */
     .footer-images {
       display: flex;
       justify-content: center;
@@ -266,6 +245,7 @@
       padding: 0 10px;
     }
 
+    /* 手機版 RWD 樣式 */
     @media screen and (max-width: 768px) {
       #logo {
         max-height: 120px;
@@ -284,14 +264,6 @@
       }
       .header-inner {
         padding: 20px 0;
-      }
-      .about-text-single-line {
-        font-size: 1em;
-        padding: 12px;
-        margin: 0 auto 12px auto;
-        line-height: 1.7;
-        text-align: left;
-        margin-top: 0;
       }
       .contact-section h2 {
         margin-bottom: 8px;
@@ -335,6 +307,7 @@
       }
     }
 
+    /* 電腦大螢幕縮放優化 */
     @media screen and (min-width: 1024px) {
       html {
         zoom: 1.5;
@@ -345,14 +318,12 @@
           -moz-transform-origin: 0 0;
         }
       }
-      section ul {
-        display: inline-block;
-        text-align: left;
-      }
     }
   </style>
 </head>
 <body>
+
+  <!-- 4. 網頁頁首區域 -->
   <header>
     <div class="header-inner">
       <div class="header-content">
@@ -367,122 +338,61 @@
     </div>
   </header>
 
+  <!-- 跑馬燈 -->
   <marquee class="marquee" scrollamount="8">
     免費估價 歡迎來電0936797580 免費估價 歡迎來電0936797580 免費估價 歡迎來電0936797580
   </marquee>
 
+  <!-- 5. 主要內容區域 -->
+  <!-- 關於我們 -->
   <section>
-  <h2>🔨 關於我們</h2>
-  <p class="about-text">
-    天宸輕鋼架位於台南，擁有豐富經驗，服務學校、企業、月子中心、飯店、民宿與住宅等多元場域。<br />
-    我們提供專業施工與免費估價，歡迎隨時洽詢了解！
-  </p>
-</section>
+    <h2>🔨 關於我們</h2>
+    <p class="about-text">
+      天宸輕鋼架位於台南，擁有豐富經驗，服務學校、企業、月子中心、飯店、民宿與住宅等多元場域。<br />
+      我們提供專業施工與免費估價，歡迎隨時洽詢了解！
+    </p>
+  </section>
 
-  <style>
-  section {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 15px;
-  font-family: "標楷體", "DFKai-SB", "微軟正黑體", "Microsoft JhengHei", "PingFang TC", serif;
-}
+  <!-- 服務項目 -->
+  <section>
+    <h2>🔨 服務項目</h2>
+    <ul class="service-list">
+      <li>輕鋼架天花板</li>
+      <li>輕鋼架隔間</li>
+      <li>石膏板</li>
+      <li>礦纖板</li>
+      <li>矽酸鈣板</li>
+      <li>水泥纖維板</li>
+      <li>塑鋼版</li>
+      <li>隔間設計與施工服務</li>
+    </ul>
+  </section>
 
-
-
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .about-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-    text-align: center;
-    white-space: pre-line; /* 保留換行 */
-  }
-</style>
-
-  
- <section>
-  <h2>🔨服務項目</h2>
-  <ul class="service-list">
-    <li>輕鋼架天花板</li>
-    <li>輕鋼架隔間</li>
-    <li>石膏板</li>
-    <li>礦纖板</li>
-    <li>矽酸鈣板</li>
-    <li>水泥纖維板</li>
-    <li>塑鋼版</li>
-    <li>隔間設計與施工服務</li>
-  </ul>
-</section>
-
-<style>
-  section {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 15px;
-  font-family: "標楷體", "DFKai-SB", "微軟正黑體", "Microsoft JhengHei", "PingFang TC", serif;
-}
-
-
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .service-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .service-list li {
-    background-color: #f2f2f2;
-    padding: 12px 16px;
-    margin-bottom: 12px;
-    border-radius: 6px;
-  }
-</style>
-
-
-  
-<section class="contact-section">
-  <h2>🔨 聯絡我們</h2>
-
-  <div class="contact-item">
-    電話：
-    <a href="tel:0936797580"
-       onclick="return gtag_report_conversion('tel:0936797580');">
-      0936797580
-    </a>
-    <br>
-
-    <a href="https://line.me/ti/p/@155aarli"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="color:#000;text-decoration:underline;font-weight:600;">
-      （如電話繁忙請使用 LINE 留言）
-    </a>
-
-    <div class="line-id-mobile">
-      Line ID：155aarli
+  <!-- 聯絡資訊 -->
+  <section class="contact-section">
+    <h2>🔨 聯絡我們</h2>
+    <div class="contact-item">
+      電話：
+      <a href="tel:0936797580" onclick="return gtag_report_conversion('tel:0936797580');">
+        0936797580
+      </a>
+      <br>
+      <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer" style="color:#000;text-decoration:underline;font-weight:600;">
+        （如電話繁忙請使用 LINE 留言）
+      </a>
+      <div class="line-id-mobile">
+        Line ID：155aarli
+      </div>
     </div>
-  </div>
+    <div class="contact-item">
+      地址：
+      <a href="https://www.google.com/maps/dir/?api=1&destination=台南市南區明興路" target="_blank" rel="noopener noreferrer">
+        台南市南區明興路
+      </a>
+    </div>
+  </section>
 
-  <div class="contact-item">
-    地址：
-    <a href="https://www.google.com/maps/dir/?api=1&destination=台南市南區明興路"
-       target="_blank"
-       rel="noopener noreferrer">
-      台南市南區明興路
-    </a>
-  </div>
-</section>
-
+  <!-- 右側 LINE 懸浮按鈕 -->
   <div class="line-container">
     <a href="https://line.me/ti/p/@155aarli" target="_blank" rel="noopener noreferrer">
       <img src="images_tc/tc7.gif" alt="LINE" class="line-icon" />
@@ -491,14 +401,17 @@
     <div class="line-id-text">Line ID: @155aarli</div>
   </div>
 
+  <!-- 實績動態展示 -->
   <div class="footer-images">
     <img src="images_tc/tc1.gif" alt="動態圖片 tc1" />
     <img src="images_tc/tc4.gif" alt="動態圖片 tc4" />
     <img src="images_tc/tc5.gif" alt="動態圖片 tc5" />
   </div>
 
+  <!-- 頁尾 -->
   <footer>
     <p>©2026天宸輕鋼架. 版權所有.</p>
   </footer>
+
 </body>
 </html>
